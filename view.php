@@ -3,20 +3,9 @@
    if(!isset($_SESSION['user'])){
        header('location:login.php');
    }
-    include('connection.php');
-    $sql = "select * from tb2";
-    $result = mysqli_query($conn, $sql);
-    while ($row = mysqli_fetch_array($result)) {
-        echo "<table>";
-        echo "<tr>";
-            echo "<p>". "Sách: " . $row['ID'] . "</p>";
-            echo "<p>" . "Tên sách: " . $row['Tensach'] . "</p>";
-            echo "<p >" . "Tên tác giả: " . $row['Tentacgia'] . "</p>";
-            echo "<p >" . " Đơn giá: " . $row['Dongia'] . "</p>";
-            echo "<p >" . " Ngày phát hành: " . $row['Ngayphathanh'] . "</p>";
-        echo "</tr>";
-        echo "</table>";
-    }
+    include('controller.php');
+    $control = new Controller();
+    $control->view();
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +16,13 @@
     <title>Document</title>
 </head>
 <body>
-    <button><a href="logout_submit.php">logout</a></button>
-    <button><a href="insert.php">Thêm sách</a></button>
+    <form action="controller.php" method="post">
+      <div>
+        <input type="submit" name="submit" value="logout">
+        <button><a href="insert.php">Thêm sách</a></button>
+      </div>
+    </form>
+    
+    
 </body>
 </html>

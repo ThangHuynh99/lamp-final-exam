@@ -1,6 +1,4 @@
-<?php
-    include('controller.php');
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-        <form method="post" action="register_submit.php">       
+        <form method="post" action="controller.php">       
             <table>
                 <tr>
                     <td>

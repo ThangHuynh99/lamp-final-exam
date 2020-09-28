@@ -7,7 +7,7 @@
 </head>
 <body>
     <div>
-        <form  method="post" action="login_submit.php">     
+        <form  method="post" action="controller.php">     
             <table>
                 <tr>
                     <td>

@@ -47,10 +47,10 @@
                 <td>
                      <input type="submit" name="submit" value="insert">
                      <button><a href="view.php">View Sách</a></button>
+                     <input type="submit" name="submit" value="logout">
                 </td>
             </tr>   
         </table>
-        <button><a href="logout_submit.php">Logout</a></button>
     </form>
 </body>
 </html>
